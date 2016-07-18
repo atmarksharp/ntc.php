@@ -31,6 +31,8 @@ Sample Usage:
 
 */
 
+require 'vendor/autoload.php';
+
 class NTC {
 
   public static function init () {
@@ -46,6 +48,7 @@ class NTC {
 
   public static function name ($color) {
     $color = strtoupper($color);
+    eval(\Psy\sh);
     if(count($color) < 3 || count($color) > 7)
       return array("#000000", "Invalid Color: " . $color, false);
     if(count($color) % 3 == 0)
