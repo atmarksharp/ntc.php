@@ -75,7 +75,7 @@ class NTC {
       }
     }
 
-    return ($cl < 0 ? array("#000000", "Invalid Color: " . $color, false) : array("#" . self::$names[cl][0], self::$names[cl][1], false));
+    return ($cl < 0 ? array("#000000", "Invalid Color: " . $color, false) : array("#" . self::$names[$cl][0], self::$names[$cl][1], false));
   }
 
   // adopted from: Farbtastic 1.2
