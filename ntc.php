@@ -112,7 +112,11 @@ class NTC {
   // adopted from: Farbtastic 1.2
   // http://acko.net/dev/farbtastic
   public static function rgb ($color) {
-    return [intval('0x' . self::js_substr($color,1, 3)), intval('0x' + self::js_substr($color,3, 5)),  intval('0x' . self::js_substr($color,5, 7))];
+    return array(
+      hexdec(self::js_substr($color,1,3)),
+      hexdec(self::js_substr($color,3,5)),
+      hexdec(self::js_substr($color,5,7))
+    );
   }
 
   private static function js_substr($string, $from, $to){
