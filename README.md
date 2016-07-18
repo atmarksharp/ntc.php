@@ -6,7 +6,7 @@ http://chir.ag/projects/ntc/
 The original script (`ntc.js`) is released under the: Creative Commons License:
 Attribution 2.5 http://creativecommons.org/licenses/by/2.5/
 
-For more detail information, see author's comments of [`ntc.js`](https://github.com/atmarksharp/ntc.php/blob/master/original/ntc.js).
+For more detail information about `ntc js`, see author's comments of [`ntc.js`](https://github.com/atmarksharp/ntc.php/blob/master/original/ntc.js).
 
 ## Sample Usage
 
@@ -31,3 +31,12 @@ var_dump($n_match);
 //   bool(false)
 // }
 ```
+
+## License
+
+CC By 2.5
+http://creativecommons.org/licenses/by/2.5/
+
+Original version was created by Chirag Mehta, And ported to PHP by atmarksharp
+
+<a rel="license" href="http://creativecommons.org/licenses/by/2.5/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/2.5/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 Generic License</a>.
