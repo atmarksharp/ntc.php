@@ -48,12 +48,11 @@ class NTC {
 
   public static function name ($color) {
     $color = strtoupper($color);
-    eval(\Psy\sh);
-    if(count($color) < 3 || count($color) > 7)
+    if(strlen($color) < 3 || strlen($color) > 7)
       return array("#000000", "Invalid Color: " . $color, false);
-    if(count($color) % 3 == 0)
+    if(strlen($color) % 3 == 0)
       $color = "#" . $color;
-    if(count($color) == 4)
+    if(strlen($color) == 4)
       $color = "#" . $color.substr(1, 1) + $color.substr(1, 1) + $color.substr(2, 1) + $color.substr(2, 1) + $color.substr(3, 1) + $color.substr(3, 1);
 
     $rgb = self::rgb($color);
@@ -68,13 +67,13 @@ class NTC {
       if($color == "#" . self::$names[$i][0])
         return array("#" . self::$names[$i][0], self::$names[$i][1], true);
 
-      $ndf1 = pow(r - self::$names[$i][2], 2) + pow(g - self::$names[$i][3], 2) + pow(b - self::$names[$i][4], 2);
-      $ndf2 = pow(h - self::$names[$i][5], 2) + pow(s - self::$names[$i][6], 2) + pow(l - self::$names[$i][7], 2);
+      $ndf1 = pow($r - self::$names[$i][2], 2) + pow($g - self::$names[$i][3], 2) + pow($b - self::$names[$i][4], 2);
+      $ndf2 = pow($h - self::$names[$i][5], 2) + pow($s - self::$names[$i][6], 2) + pow($l - self::$names[$i][7], 2);
       $ndf = $ndf1 + $ndf2 * 2;
       if($df < 0 || $df > $ndf)
       {
-        $df = ndf;
-        $cl = i;
+        $df = $ndf;
+        $cl = $i;
       }
     }
 
