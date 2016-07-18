@@ -4,7 +4,7 @@
 +-----------------------------------------------------------------+
 |     Created by Chirag Mehta - http://chir.ag/projects/ntc       |
 |-----------------------------------------------------------------|
-|               ntc js (Name that Color JavaScript)               |
+|               ntc php (Name that Color PHP)                     |
 +-----------------------------------------------------------------+
 
 All the functions, code, lists etc. have been written specifically
@@ -16,18 +16,16 @@ Attribution 2.5 http://creativecommons.org/licenses/by/2.5/
 
 Sample Usage:
 
-  <script type="text/javascript" src="self::js"></script>
+  <?php
 
-  <script type="text/javascript">
+  require 'ntc.php';
 
-    $n_match  = self::name("#6195ED");
-    n_rgb        = $n_match[0]; // This is the RGB value of the closest matching color
-    n_name       = $n_match[1]; // This is the text string for the name of the match
-    $n_exactmatch = $n_match[2]; // True if exact color match, False if close-match
+  $n_match  = NTC::name("#6195ED");
+  $n_rgb        = $n_match[0]; // This is the RGB value of the closest matching color
+  $n_name       = $n_match[1]; // This is the text string for the name of the match
+  $n_exactmatch = $n_match[2]; // True if exact color match, False if close-match
 
-    alert(n_match);
-
-  </script>
+  var_dump($n_match);
 
 */
 
