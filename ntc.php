@@ -83,9 +83,9 @@ class NTC {
   public static function hsl ($color) {
 
     $rgb = array(
-      intval('0x' . self::js_substr($color,1, 3)) / 255,
-      intval('0x' . self::js_substr($color,3, 5)) / 255,
-      intval('0x' . self::js_substr($color,5, 7)) / 255);
+      hexdec(self::js_substr($color,1,3)) / 255,
+      hexdec(self::js_substr($color,3,5)) / 255,
+      hexdec(self::js_substr($color,5,7)) / 255);
     $min; $max; $delta; $h; $s; $l;
     $r = $rgb[0]; $g = $rgb[1]; $b = $rgb[2];
 
@@ -106,7 +106,7 @@ class NTC {
       if ($max == $b && $max != $r) $h += (4 + ($r - $g) / $delta);
       $h /= 6;
     }
-    return [intval($h * 255), intval($s * 255), intval($l * 255)];
+    return array(intval($h * 255), intval($s * 255), intval($l * 255));
   }
 
   // adopted from: Farbtastic 1.2
