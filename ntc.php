@@ -29,8 +29,6 @@ Sample Usage:
 
 */
 
-require 'vendor/autoload.php'; // Only for debug!
-
 class NTC {
 
   public static function init () {
